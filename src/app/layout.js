@@ -14,7 +14,7 @@ const poppins = Poppins({
 });
 
 export const metadata = {
-  title: 'AutomateAI - Enterprise AI Automation',
+  title: 'AutomateAI - Enterprise AI Automation      ',
   description: 'Custom AI agents and workflow automation for mid to large enterprises',
 };
 
