@@ -11,7 +11,7 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18' # Match the Node.js version used in your project
+          node-version: '18'
       - name: Install dependencies
         run: npm install
       - name: Build Next.js app
@@ -19,9 +19,9 @@ jobs:
       - name: Deploy to Hostinger
         uses: SamKirkland/FTP-Deploy-Action@v4.3.3
         with:
-          server: ftp://82.25.83.211
-          username: u640587353
+          server: ${{ secrets.FTP_HOST }}
+          username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: ./public_html/
-          dangerous-clean-slate: true # Optional: Deletes existing files in public_html before uploading
+          dangerous-clean-slate: true
