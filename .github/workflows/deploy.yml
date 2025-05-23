@@ -21,7 +21,7 @@ jobs:
         with:
           server: ftp://82.25.83.211
           username: u640587353
-          password: @Unicorn#u281igdbvyaUT^
+          password: ${{ secrets.FTP_PASSWORD }}
           local-dir: ./out/
           server-dir: ./public_html/
           dangerous-clean-slate: true # Optional: Deletes existing files in public_html before uploading
